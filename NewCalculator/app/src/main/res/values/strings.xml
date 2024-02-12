@@ -32,7 +32,7 @@
     <string name="LogText">log2</string>
     <string name="squareRootText">√</string>
     <string name="absoluteValueText">|x|</string>
-    <string name="piText">π</string>
+    <string name="piText">Pi</string>
     <string name="eText">e</string>
     <string name="xSquaredText">x<sup><small>2</small></sup></string>
     <string name="xPowerYText">x<sup><small>y</small></sup></string>

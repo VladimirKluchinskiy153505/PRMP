@@ -1,3 +1,31 @@
+app:shapeAppearanceOverlay="@style/RectangularButton"
+app:backgroundTint="@color/blacks"
+ <TextView
+            android:id="@+id/previCal"
+            android:layout_marginTop="5dp"
+            android:textAlignment="textEnd"
+            android:textSize="29sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|normal"
+            android:background="#00000000"
+            android:maxLines="1"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"/>
+        <EditText
+            android:id="@+id/display"
+            android:textAlignment="textEnd"
+            android:textSize="45sp"
+            android:hint="0"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textStyle="bold|normal"
+            android:background="#00000000"
+            android:maxLines="1"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"/>
+
 package com.example.newcalculator
 
 import android.content.pm.ActivityInfo
