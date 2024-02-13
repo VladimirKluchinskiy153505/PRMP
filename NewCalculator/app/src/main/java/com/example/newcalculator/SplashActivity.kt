@@ -9,6 +9,7 @@ import android.os.Handler
 class SplashActivity : AppCompatActivity() {
     private val splash_time: Long = 2000
     override fun onCreate(savedInstanceState: Bundle?) {
+       //requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 

@@ -3,6 +3,7 @@ package com.example.newcalculator
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.text.SpannableStringBuilder
@@ -10,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.core.os.HandlerCompat.postDelayed
 import org.mariuszgromada.math.mxparser.Expression
 
 //import org.mariuszgromada.math.mxparser.Expression
@@ -29,6 +31,14 @@ class MainActivity : AppCompatActivity() {
         display = findViewById(R.id.data_tv)
         display.showSoftInputOnFocus = false
         vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
+        val cleanButton = findViewById<Button>(R.id.btn_clear)?: throw IllegalStateException("button_clear not found")
+
+        cleanButton.setOnLongClickListener {
+            Vibrate()
+            display.setText("")
+            previousCal.text = ""
+            true
+        }
     }
 
     private fun updateText(strToAdd:String){
@@ -39,9 +49,6 @@ class MainActivity : AppCompatActivity() {
         val rightStr = oldStr.substring(cursorPs)
         display.setText(String.format("%s%s%s",leftStr,strToAdd,rightStr))
         display.setSelection(cursorPs + strToAdd.length)
-    }
-    fun zeroBtn(v: View){
-        updateText("0")
     }
     fun Vibrate(){
         if (vibrator.hasVibrator()) {
@@ -82,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         Vibrate()
         updateText(resources.getString(R.string.addText))
     }
-    fun OnEqualClick(v: View){
+    fun OnEqualClick1(v: View){
         Vibrate()
         var userExp = display.text.toString()
         previousCal.text = userExp
@@ -92,9 +99,18 @@ class MainActivity : AppCompatActivity() {
         val result = exp.calculate().toString()
         display.setText(result)
         display.setSelection(result.length)
-
-
     }
+    fun OnEqualClick(v: View){
+        Vibrate()
+        var userExp = display.text.toString()
+        //previousCal.text = userExp
+        userExp = userExp.replace(resources.getString(R.string.divideText).toRegex(), "/")
+        userExp = userExp.replace(resources.getString(R.string.multiplyText).toRegex(), "*")
+        val exp = Expression(userExp)
+        val result = exp.calculate().toString()
+        previousCal.setText(result)
+    }
+
     fun OnClearClick(v: View){
         Vibrate()
         display.setText("")

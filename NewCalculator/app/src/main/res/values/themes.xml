@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="parent_button" parent="Widget.MaterialComponents.Button">
+    <style name="parent_button" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:backgroundTint">@color/dark_green</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">1dp</item>
@@ -24,13 +24,13 @@
 
     <style name="simple_button" parent="parent_button">
         <item name="android:textSize">30sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="land_simple_button" parent="parent_button">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+
         <item name="android:textAllCaps">false</item>
     </style>
 
