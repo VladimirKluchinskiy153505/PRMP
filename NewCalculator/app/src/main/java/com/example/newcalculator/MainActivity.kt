@@ -89,17 +89,6 @@ class MainActivity : AppCompatActivity() {
         Vibrate()
         updateText(resources.getString(R.string.addText))
     }
-    fun OnEqualClick1(v: View){
-        Vibrate()
-        var userExp = display.text.toString()
-        previousCal.text = userExp
-        userExp = userExp.replace(resources.getString(R.string.divideText).toRegex(), "/")
-        userExp = userExp.replace(resources.getString(R.string.multiplyText).toRegex(), "*")
-        val exp = Expression(userExp)
-        val result = exp.calculate().toString()
-        display.setText(result)
-        display.setSelection(result.length)
-    }
     fun OnEqualClick(v: View){
         Vibrate()
         var userExp = display.text.toString()
@@ -172,11 +161,10 @@ class MainActivity : AppCompatActivity() {
         Vibrate()
         updateText("^(")
     }
-    fun OnPrimeClick(v: View){
+    fun OnPercentClick(v: View){
         Vibrate()
-        updateText("ispr(")
+        updateText("%")
     }
-
     fun OnBackSpaceClick(v: View){
         Vibrate()
         val cursorPos = display.selectionStart
@@ -189,15 +177,29 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    fun rotateBtn(v: View){
-
-        requestedOrientation = if (isPortrait){
-            ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
-        }
-        else{
-            ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT
-        }
-        isPortrait = !isPortrait
-    }
-
+//    fun rotateBtn(v: View){
+//
+//        requestedOrientation = if (isPortrait){
+//            ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+//        }
+//        else{
+//            ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT
+//        }
+//        isPortrait = !isPortrait
+//    }
+//    fun OnPrimeClick(v: View){
+//        Vibrate()
+//        updateText("ispr(")
+//    }
+//    fun OnEqualClick1(v: View){
+//        Vibrate()
+//        var userExp = display.text.toString()
+//        previousCal.text = userExp
+//        userExp = userExp.replace(resources.getString(R.string.divideText).toRegex(), "/")
+//        userExp = userExp.replace(resources.getString(R.string.multiplyText).toRegex(), "*")
+//        val exp = Expression(userExp)
+//        val result = exp.calculate().toString()
+//        display.setText(result)
+//        display.setSelection(result.length)
+//    }
 }

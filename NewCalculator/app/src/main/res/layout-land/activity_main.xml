@@ -73,9 +73,9 @@
                 style="@style/land_simple_row">
 
                 <Button
-                    android:id="@+id/lbutton_prime"
-                    android:text="@string/isPrimeFunctionText"
-                    android:onClick="OnPrimeClick"
+                    android:id="@+id/lbutton_percent"
+                    android:text="@string/percent_text"
+                    android:onClick="OnPercentClick"
                     style="@style/land_fun_button"/>
 
                 <Button

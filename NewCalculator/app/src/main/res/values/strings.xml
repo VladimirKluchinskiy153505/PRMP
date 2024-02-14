@@ -37,6 +37,7 @@
     <string name="xSquaredText">x<sup><small>2</small></sup></string>
     <string name="xPowerYText">x<sup><small>y</small></sup></string>
     <string name="isPrimeFunctionText">prime</string>
+    <string name="percent_text">%</string>
     <string name="backspace">⌫</string>
 
 
