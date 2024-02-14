@@ -84,15 +84,16 @@
 
                 <Button
                     android:id="@+id/button_open"
-                    style="@style/simple_button"
+                    android:text="@string/parenthesesOpenText"
                     android:onClick="OnOpenBracketClick"
-                    android:text="@string/parenthesesOpenText" />
+                    style="@style/bracket_button"
+                    />
 
                 <Button
                     android:id="@+id/button_close"
                     android:text="@string/parenthesesCloseText"
                     android:onClick="OnCloseBracketClick"
-                    style="@style/simple_button"/>
+                    style="@style/bracket_button"/>
 
                 <Button
                     android:id="@+id/btn_clear"
