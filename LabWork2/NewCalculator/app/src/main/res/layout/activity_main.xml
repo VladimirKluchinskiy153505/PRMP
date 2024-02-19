@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        >
+
+        <EditText
+            android:id="@+id/data_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:enabled="true"
+            android:hint="0"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLines="8"
+            android:textAlignment="textEnd"
+            android:textColor="@color/numbers_color"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|normal" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginBottom="6dp" />
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold|normal"
+            android:background="#00000000"
+            android:maxLines="2"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_weight="1"
+
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+
+        android:paddingBottom="2dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow style="@style/simple_row">
+            <Button
+                android:id="@+id/button_scan"
+                android:text="Scan"
+                style="@style/fun_button"
+                android:backgroundTint="@color/orange"
+                android:layout_marginBottom="4dp"
+                android:onClick="OnScanClick"
+                />
+        </TableRow>
+        <TableRow style="@style/simple_row">
+
+            <Button
+                android:id="@+id/button_pi"
+                style="@style/fun_button"
+                android:onClick="OnPiClick"
+                android:text="@string/piText" />
+
+            <Button
+                android:id="@+id/button_all_clear"
+                style="@style/fun_button"
+                android:onClick="OnClearClick"
+                android:text="@string/clearText" />
+
+            <Button
+                android:id="@+id/button_open"
+                style="@style/bracket_button"
+                android:onClick="OnOpenBracketClick"
+                android:text="@string/parenthesesOpenText" />
+
+            <Button
+                android:id="@+id/button_close"
+                style="@style/bracket_button"
+                android:onClick="OnCloseBracketClick"
+                android:text="@string/parenthesesCloseText" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/simple_button"
+                android:onClick="OnBackSpaceClick"
+                android:text="C" />
+
+        </TableRow>
+
+        <TableRow style="@style/simple_row">
+
+            <Button
+                android:id="@+id/btn_sin"
+                style="@style/fun_button"
+                android:onClick="OnSinClick"
+                android:text="@string/trigSinText" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/sevenText" />
+
+            <Button
+                android:id="@+id/btn001"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/eightText" />
+
+            <Button
+                android:id="@+id/btn003"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/nineText" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                style="@style/simple_button"
+                android:onClick="OnDivideClick"
+                android:text="@string/divideText" />
+
+        </TableRow>
+
+        <TableRow style="@style/simple_row">
+
+            <Button
+                android:id="@+id/btn_cos"
+                style="@style/fun_button"
+                android:onClick="OnCosClick"
+                android:text="@string/trigCosText" />
+
+            <Button
+                android:id="@+id/btn012"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/fourText" />
+
+            <Button
+                android:id="@+id/btn0011"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/fiveText" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/sixText" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                style="@style/simple_button"
+                android:onClick="OnMultiplyClick"
+                android:text="@string/multiplyText" />
+
+        </TableRow>
+
+        <TableRow style="@style/simple_row">
+
+            <Button
+                android:id="@+id/btn_ln"
+                style="@style/fun_button"
+                android:onClick="OnLnClick"
+                android:text="@string/naturalLogText" />
+
+            <Button
+                android:id="@+id/btn032"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/oneText" />
+
+            <Button
+                android:id="@+id/btn021"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/twoText" />
+
+            <Button
+                android:id="@+id/btn031"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/threeText" />
+
+            <Button
+                android:id="@+id/btnDivides"
+                style="@style/simple_button"
+                android:onClick="OnSubtractClick"
+                android:text="@string/subtractText" />
+        </TableRow>
+
+        <TableRow style="@style/simple_row">
+
+            <Button
+                android:id="@+id/btn_pow"
+                style="@style/fun_button"
+                android:onClick="OnXPowerYClcik"
+                android:text="@string/xPowerYText" />
+
+            <Button
+                android:id="@+id/btn036"
+                style="@style/simple_button"
+                android:onClick="OnPointClick"
+                android:text="@string/decimalText" />
+
+            <Button
+                android:id="@+id/btn025"
+                style="@style/simple_button"
+                android:onClick="OnDigitClick"
+                android:text="@string/zeroText" />
+
+            <Button
+                android:id="@+id/btnDiv"
+                style="@style/simple_button"
+                android:onClick="OnEqualClick"
+                android:text="@string/equalsText" />
+
+            <Button
+                android:id="@+id/btnDividess"
+                style="@style/simple_button"
+                android:onClick="OnAddClick"
+                android:text="@string/addText" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</LinearLayout>

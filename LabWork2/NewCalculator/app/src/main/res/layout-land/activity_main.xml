@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="0dp"
+        >
+
+        <EditText
+            android:id="@+id/data_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:enabled="true"
+            android:hint="0"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLines="2"
+            android:textAlignment="textEnd"
+            android:textColor="@color/numbers_color"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|normal"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_marginBottom="6dp" />
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_marginTop="1dp"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold|normal"
+            android:background="#00000000"
+            android:inputType="text"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_marginBottom="1dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_gravity="bottom">
+
+            <TableRow
+                style="@style/land_simple_row">
+
+                <Button
+                    android:id="@+id/lbutton_percent"
+                    android:text="@string/percent_text"
+                    android:onClick="OnPercentClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_x2"
+                    android:text="@string/xSquaredText"
+                    android:onClick="OnXSquareClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_xy"
+                    android:text="@string/xPowerYText"
+                    android:onClick="OnXPowerYClcik"
+                    style="@style/land_fun_button"
+                    />
+
+                <Button
+                    android:id="@+id/lbutton_ac"
+                    android:text="@string/clearText"
+                    android:onClick="OnClearClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_open"
+                    android:text="@string/parenthesesOpenText"
+                    android:onClick="OnOpenBracketClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_close"
+                    android:text="@string/parenthesesCloseText"
+                    android:onClick="OnCloseBracketClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:text="@string/backspace"
+                    android:onClick="OnBackSpaceClick"
+                    style="@style/land_fun_button"/>
+            </TableRow>
+
+            <TableRow
+                style="@style/land_simple_row">
+
+                <Button
+                    android:id="@+id/lbutton_sin"
+                    android:text="@string/trigSinText"
+                    android:onClick="OnSinClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_cos"
+                    android:text="@string/trigCosText"
+                    android:onClick="OnCosClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_tan"
+                    android:text="@string/trigTanText"
+                    android:onClick="OnTanClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_7"
+                    android:onClick="OnDigitClick"
+                    android:text="@string/sevenText"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_8"
+                    android:onClick="OnDigitClick"
+                    android:text="@string/eightText"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_9"
+                    android:onClick="OnDigitClick"
+                    android:text="@string/nineText"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_divide"
+                    android:text="@string/divideText"
+                    android:onClick="OnDivideClick"
+                    style="@style/land_simple_button"/>
+            </TableRow>
+
+            <TableRow
+                style="@style/land_simple_row">
+
+                <Button
+                    android:id="@+id/lbutton_rev_sin"
+                    style="@style/land_fun_button"
+                    android:onClick="OnArcSinClick"
+                    android:text="@string/trigArcSinText" />
+
+                <Button
+                    android:id="@+id/lbutton_rev_cos"
+                    android:text="@string/trigArcCosText"
+                    android:onClick="OnArcCosClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_rev_tan"
+                    android:text="@string/trigArcTanText"
+                    android:onClick="OnArcTanClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_4"
+                    android:text="@string/fourText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_5"
+                    android:text="@string/fiveText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_6"
+                    android:text="@string/sixText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_mult"
+                    android:text="@string/multiplyText"
+                    android:onClick="OnMultiplyClick"
+                    style="@style/land_simple_button"/>
+            </TableRow>
+
+            <TableRow
+                style="@style/land_simple_row">
+
+                <Button
+                    android:id="@+id/lbutton_log2"
+                    android:text="@string/LogText"
+                    android:onClick="OnLog2Click"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_ln"
+                    android:text="@string/naturalLogText"
+                    android:onClick="OnLnClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_sqrt"
+                    android:text="@string/squareRootText"
+                    android:onClick="OnSqrtClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_1"
+                    android:text="@string/oneText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_2"
+                    android:text="@string/twoText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_3"
+                    android:text="@string/threeText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_sub"
+                    android:text="@string/subtractText"
+                    android:onClick="OnSubtractClick"
+                    style="@style/land_simple_button"/>
+            </TableRow>
+
+            <TableRow
+                style="@style/land_simple_row">
+
+                <Button
+                    android:id="@+id/lbutton_e"
+                    android:text="@string/eText"
+                    android:onClick="OnEClick"
+                    style="@style/land_fun_button"/>
+                <Button
+                    android:id="@+id/lbutton_pi"
+                    android:text="@string/piText"
+                    android:onClick="OnPiClick"
+                    style="@style/land_fun_button"/>
+                <Button
+                    android:id="@+id/lbutton_mod"
+                    android:text="@string/absoluteValueText"
+                    android:onClick="OnAbsClick"
+                    style="@style/land_fun_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_point"
+                    android:text="@string/decimalText"
+                    android:onClick="OnPointClick"
+                    style="@style/land_simple_button"/>
+                <Button
+                    android:id="@+id/lbutton_0"
+                    android:text="@string/zeroText"
+                    android:onClick="OnDigitClick"
+                    style="@style/land_simple_button"/>
+                <Button
+                    android:id="@+id/lbutton_equal"
+                    android:text="@string/equalsText"
+                    android:onClick="OnEqualClick"
+                    style="@style/land_simple_button"/>
+
+                <Button
+                    android:id="@+id/lbutton_plus"
+                    android:text="@string/addText"
+                    android:onClick="OnAddClick"
+                    style="@style/land_simple_button"/>
+            </TableRow>
+
+        </TableLayout>
+
+</LinearLayout>
